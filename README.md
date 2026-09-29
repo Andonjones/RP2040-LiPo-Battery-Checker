@@ -55,14 +55,13 @@ The battery checker began as a hand-drawn concept while I worked through how the
 
 ### Initial Concept
 
-![Initial battery checker concept](docs/schematic-v0-concept.jpg)
+![Initial battery checker concept](docs/voltage_checker_rough_draft.jpg)
 
 The first drawing was primarily used to work through the overall layout and connections between the major components. At this stage I was still determining how the RP2040 would measure the battery voltage while remaining safely isolated from voltages above its ADC limits.
 
 ### First Prototype Design
 
-![First prototype schematic](docs/schematic-v1-prototype.jpg)
-
+![First prototype schematic](docs/voltage_checker_schematic_mk2.jpg)
 After working through the initial concept, I created a more detailed version showing the voltage-divider circuit, step-down converter, RP2040, display wiring, and GPIO connections.
 
 This design became the basis for the first physical prototypes.
