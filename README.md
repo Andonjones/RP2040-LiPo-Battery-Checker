@@ -49,6 +49,34 @@ Planned/current hardware includes:
 - LiPo battery input
 - Custom wiring/circuit layout
 
+  ## Design Evolution
+
+The battery checker began as a hand-drawn concept while I worked through how the battery input, voltage measurement circuit, microcontroller, display, and power supply would interact.
+
+### Initial Concept
+
+![Initial battery checker concept](docs/schematic-v0-concept.jpg)
+
+The first drawing was primarily used to work through the overall layout and connections between the major components. At this stage I was still determining how the RP2040 would measure the battery voltage while remaining safely isolated from voltages above its ADC limits.
+
+### First Prototype Design
+
+![First prototype schematic](docs/schematic-v1-prototype.jpg)
+
+After working through the initial concept, I created a more detailed version showing the voltage-divider circuit, step-down converter, RP2040, display wiring, and GPIO connections.
+
+This design became the basis for the first physical prototypes.
+
+Testing those prototypes exposed several problems, including mistakes in how I handled voltage limits that resulted in damaged microcontrollers. Those failures changed how I approached the project and reinforced the importance of checking power rails, component limits, and circuit behavior before connecting sensitive hardware.
+
+### Current Revision
+
+The project is now being revised around a smaller RP2040-based board to reduce the overall size and improve the design.
+
+The next revision will also incorporate improvements discovered during prototyping, including cleaner power regulation, indicator hardware, and a more permanent circuit layout.
+
+The original drawings are preserved here to document how the design developed rather than replacing them with only the final version.
+
 ## Voltage Measurement
 
 Because the voltage of the battery can exceed the safe input voltage of the RP2040's ADC, the battery cannot be connected directly to the analog input.
